@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'iPaySDK_Example' do
+  pod 'iPaySDK', :path => '../'
+
+  target 'iPaySDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
