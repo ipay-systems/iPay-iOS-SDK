@@ -14,6 +14,10 @@
 		8ECB648A01C8AB087415678BF1392768 /* Pods-iPaySDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D76643CCF0DE23D31287406D538C5BDD /* Pods-iPaySDK_Example-dummy.m */; };
 		9AA3826486179664E3D01709860B0C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B1C35DE3CA34BBE607FE79727FE1BCBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		BAAFF6F9223F72FD004BA1EF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F5223F72FD004BA1EF /* Settings.swift */; };
+		BAAFF6FA223F72FD004BA1EF /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F6223F72FD004BA1EF /* Endpoints.swift */; };
+		BAAFF6FB223F72FD004BA1EF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F7223F72FD004BA1EF /* Services.swift */; };
+		BAAFF6FC223F72FD004BA1EF /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F8223F72FD004BA1EF /* iPaySDK.swift */; };
 		DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */; };
 		F2299C4A5938604BF094EAC0F64448CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +66,10 @@
 		A772718FE0176F9F3A5B4C1BE2588B78 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7DA77AFAF98CBF010BB7C15A8D10ECE /* Pods-iPaySDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPaySDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AFE5E6896DE3046940F4C044F78D8AB8 /* Pods-iPaySDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPaySDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		BAAFF6F5223F72FD004BA1EF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = iPaySDK/Classes/Settings.swift; sourceTree = "<group>"; };
+		BAAFF6F6223F72FD004BA1EF /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = iPaySDK/Classes/Endpoints.swift; sourceTree = "<group>"; };
+		BAAFF6F7223F72FD004BA1EF /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Services.swift; path = iPaySDK/Classes/Services.swift; sourceTree = "<group>"; };
+		BAAFF6F8223F72FD004BA1EF /* iPaySDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iPaySDK.swift; path = iPaySDK/Classes/iPaySDK.swift; sourceTree = "<group>"; };
 		BF57FC1913AE013862B5885F42D7B540 /* Pods-iPaySDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPaySDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		C3321E3A685FF660514D7876C1626F7F /* iPaySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iPaySDK.modulemap; sourceTree = "<group>"; };
 		D659260FC3F129FC97321A280C9AD9AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -216,6 +224,10 @@
 		F7E98D943BC1048C7C297BAA854B4141 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				BAAFF6F6223F72FD004BA1EF /* Endpoints.swift */,
+				BAAFF6F8223F72FD004BA1EF /* iPaySDK.swift */,
+				BAAFF6F7223F72FD004BA1EF /* Services.swift */,
+				BAAFF6F5223F72FD004BA1EF /* Settings.swift */,
 				7952002E094DD278F6B5FBC9016FBE73 /* iPaySDK.podspec */,
 				6FD82722D14D1AD22A735CC9DAE29F7E /* README.md */,
 			);
@@ -315,7 +327,7 @@
 				LastUpgradeCheck = 0930;
 				TargetAttributes = {
 					A6D8A82AB53B1CDD45B217BD47E42772 = {
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1010;
 					};
 					BB49A3D4F1420113F96893F068B08B31 = {
 						LastSwiftMigration = 1000;
@@ -365,6 +377,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAFF6F9223F72FD004BA1EF /* Settings.swift in Sources */,
+				BAAFF6FB223F72FD004BA1EF /* Services.swift in Sources */,
+				BAAFF6FC223F72FD004BA1EF /* iPaySDK.swift in Sources */,
+				BAAFF6FA223F72FD004BA1EF /* Endpoints.swift in Sources */,
 				DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
