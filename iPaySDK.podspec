@@ -52,7 +52,6 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Tasnim Alam Shovon" => "shovon54@gmail.com" }
-  # s.social_media_url   = "http://twitter.com/Tasnim Alam Shovon"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -61,7 +60,6 @@ Pod::Spec.new do |s|
   #
 
    s.platform     = :ios
-   s.platform     = :ios, "10.0"
 
   #  When using multiple platforms
    s.ios.deployment_target = "9.0"

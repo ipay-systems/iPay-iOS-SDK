@@ -18,6 +18,14 @@
 		BAAFF6FA223F72FD004BA1EF /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F6223F72FD004BA1EF /* Endpoints.swift */; };
 		BAAFF6FB223F72FD004BA1EF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F7223F72FD004BA1EF /* Services.swift */; };
 		BAAFF6FC223F72FD004BA1EF /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F8223F72FD004BA1EF /* iPaySDK.swift */; };
+		BAAFF6FD223F8FE3004BA1EF /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F6223F72FD004BA1EF /* Endpoints.swift */; };
+		BAAFF6FE223F8FE6004BA1EF /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F6223F72FD004BA1EF /* Endpoints.swift */; };
+		BAAFF6FF223F8FEB004BA1EF /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F8223F72FD004BA1EF /* iPaySDK.swift */; };
+		BAAFF700223F8FEB004BA1EF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F7223F72FD004BA1EF /* Services.swift */; };
+		BAAFF701223F8FEB004BA1EF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F5223F72FD004BA1EF /* Settings.swift */; };
+		BAAFF702223F8FEB004BA1EF /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F8223F72FD004BA1EF /* iPaySDK.swift */; };
+		BAAFF703223F8FEB004BA1EF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F7223F72FD004BA1EF /* Services.swift */; };
+		BAAFF704223F8FEB004BA1EF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAFF6F5223F72FD004BA1EF /* Settings.swift */; };
 		DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */; };
 		F2299C4A5938604BF094EAC0F64448CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -361,7 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAFF6FE223F8FE6004BA1EF /* Endpoints.swift in Sources */,
+				BAAFF700223F8FEB004BA1EF /* Services.swift in Sources */,
+				BAAFF6FF223F8FEB004BA1EF /* iPaySDK.swift in Sources */,
 				8ECB648A01C8AB087415678BF1392768 /* Pods-iPaySDK_Example-dummy.m in Sources */,
+				BAAFF701223F8FEB004BA1EF /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +381,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAFF6FD223F8FE3004BA1EF /* Endpoints.swift in Sources */,
+				BAAFF703223F8FEB004BA1EF /* Services.swift in Sources */,
+				BAAFF702223F8FEB004BA1EF /* iPaySDK.swift in Sources */,
 				841FCDFD6045C9D367E404ADAA4F93C0 /* Pods-iPaySDK_Tests-dummy.m in Sources */,
+				BAAFF704223F8FEB004BA1EF /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
