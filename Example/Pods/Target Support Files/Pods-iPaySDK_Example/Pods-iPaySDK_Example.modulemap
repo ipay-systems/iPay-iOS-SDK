@@ -1,0 +1,6 @@
+framework module Pods_iPaySDK_Example {
+  umbrella header "Pods-iPaySDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import iPaySDK
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, iPaySDKDelegate {
+    func oauthDidSuccess() {
+        DispatchQueue.main.async {
+            self.tokenLabel.text = iPaySDK.shared.getTokenToShowNow()
+            self.connectButton.setTitle("Linked with iPay", for: .normal)
+            self.connectButton.backgroundColor = UIColor.green
+            self.connectButton.setTitleColor(UIColor.black, for: .normal)
+        }
+    }
+    
+    func oauthDidFail() {
+        DispatchQueue.main.async {
+            self.connectButton.setTitle("Link with iPay", for: .normal)
+            self.connectButton.backgroundColor = UIColor.red
+            self.connectButton.setTitleColor(UIColor.black, for: .normal)
+            self.tokenLabel.text = "oAuth Failed"
+        }
+    }
+    
+    @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var tokenLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //iPaySDK.shared.environment = .Development
+        iPaySDK.shared.configure(withClientId: "xyz")
+        iPaySDK.shared.delegate = self
     }
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func connectTapped(_ sender: UIButton) {
+        iPaySDK.shared.userInitiateSession()
     }
-
+    
 }
 

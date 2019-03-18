@@ -1,0 +1,6 @@
+framework module iPaySDK {
+  umbrella header "iPaySDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

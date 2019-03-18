@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37BB186485A2CB0AAD93A968 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		37BB186485A2CB0AAD93A968 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5C40B2F66A2DE3C41DBCF8F4 /* Pods-iPaySDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPaySDK_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPaySDK_Tests/Pods-iPaySDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* iPaySDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPaySDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +42,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68702106BC5C8D32D77141A9 /* Pods-iPaySDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPaySDK_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-iPaySDK_Example/Pods-iPaySDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		714EC34B30634B1CB602BBBD /* Pods_iPaySDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPaySDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72A5B875A79D4DF22357997D /* iPaySDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = iPaySDK.podspec; path = ../iPaySDK.podspec; sourceTree = "<group>"; };
+		72A5B875A79D4DF22357997D /* iPaySDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iPaySDK.podspec; path = ../iPaySDK.podspec; sourceTree = "<group>"; };
 		75E1089EC71FE489A44BE9D3 /* Pods-iPaySDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPaySDK_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPaySDK_Tests/Pods-iPaySDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7787428A6F646733C9429989 /* Pods_iPaySDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPaySDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		836DF5AC59D38826BD20FAE2 /* Pods-iPaySDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPaySDK_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iPaySDK_Example/Pods-iPaySDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DACE247A752CA4A0543EDDFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DACE247A752CA4A0543EDDFD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

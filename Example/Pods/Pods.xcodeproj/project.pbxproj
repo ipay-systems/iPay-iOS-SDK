@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		091279972F30B8EC2FCDCC2BC37C74AF /* Pods-iPaySDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62A273DC8AEBE21FCF0EA660A33AF214 /* Pods-iPaySDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2857A98ED4F4429A1BAE844B3C4E6777 /* iPaySDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92ADB4A0E58F6AC6547E1AE003397265 /* iPaySDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B3B4ADAFA49E23CD461265E5A1E363D /* Pods-iPaySDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF57FC1913AE013862B5885F42D7B540 /* Pods-iPaySDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		841FCDFD6045C9D367E404ADAA4F93C0 /* Pods-iPaySDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C9E821469C50351FBCA1BF7E35F17B /* Pods-iPaySDK_Tests-dummy.m */; };
+		8ECB648A01C8AB087415678BF1392768 /* Pods-iPaySDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D76643CCF0DE23D31287406D538C5BDD /* Pods-iPaySDK_Example-dummy.m */; };
+		9AA3826486179664E3D01709860B0C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		B1C35DE3CA34BBE607FE79727FE1BCBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		BA83352D218EFE280024C7FC /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83352C218EFE280024C7FC /* iPaySDK.swift */; };
+		BA83352E218EFE280024C7FC /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83352C218EFE280024C7FC /* iPaySDK.swift */; };
+		BA83352F218EFE280024C7FC /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83352C218EFE280024C7FC /* iPaySDK.swift */; };
+		BA8E4559221A8F5200BA2D82 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4558221A8F5200BA2D82 /* Settings.swift */; };
+		BA8E455A221A8F5200BA2D82 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4558221A8F5200BA2D82 /* Settings.swift */; };
+		BA8E455B221A8F5200BA2D82 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4558221A8F5200BA2D82 /* Settings.swift */; };
+		BA8E455D221A901500BA2D82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E455C221A901500BA2D82 /* Services.swift */; };
+		BA8E455E221A901500BA2D82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E455C221A901500BA2D82 /* Services.swift */; };
+		BA8E455F221A901500BA2D82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E455C221A901500BA2D82 /* Services.swift */; };
+		BAA4AE2222193D83008019C9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4AE2122193D83008019C9 /* Endpoints.swift */; };
+		BAA4AE2322193D83008019C9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4AE2122193D83008019C9 /* Endpoints.swift */; };
+		BAA4AE2422193D83008019C9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4AE2122193D83008019C9 /* Endpoints.swift */; };
+		DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */; };
+		F2299C4A5938604BF094EAC0F64448CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89BB67DC69B8C532645EB01C312512DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4AC64BB10DB86C264224EC6DC3D183;
+			remoteInfo = "Pods-iPaySDK_Example";
+		};
+		AAB672C2D2EC212AD08515BEF9E0D609 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6D8A82AB53B1CDD45B217BD47E42772;
+			remoteInfo = iPaySDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		030838EC4033E161C45058C92EBDC91E /* Pods_iPaySDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPaySDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		156B8744DEEF1FBDB0E8F181169D957E /* Pods-iPaySDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPaySDK_Example.modulemap"; sourceTree = "<group>"; };
+		1A3D338922C9E1D46E0DA57C6AE29313 /* iPaySDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iPaySDK.xcconfig; sourceTree = "<group>"; };
+		1A7234399B4EB118415510AD6EF335EA /* Pods-iPaySDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPaySDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1ECAEC93FA1D35AEAA36CDFC0B6C9E25 /* Pods-iPaySDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPaySDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		34C9E821469C50351FBCA1BF7E35F17B /* Pods-iPaySDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPaySDK_Tests-dummy.m"; sourceTree = "<group>"; };
+		3A81600F52F836F8BA3B1D09E02C97B6 /* Pods-iPaySDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPaySDK_Tests-resources.sh"; sourceTree = "<group>"; };
+		3B29E1BD9A0B75A67F534A50665B5B12 /* Pods-iPaySDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPaySDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		48DD2DE38393ABE017BA17A2F03DD251 /* Pods-iPaySDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPaySDK_Example-frameworks.sh"; sourceTree = "<group>"; };
+		569969714808EC12A7ADC090E60DB50E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		62A273DC8AEBE21FCF0EA660A33AF214 /* Pods-iPaySDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPaySDK_Tests-umbrella.h"; sourceTree = "<group>"; };
+		6FD82722D14D1AD22A735CC9DAE29F7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7952002E094DD278F6B5FBC9016FBE73 /* iPaySDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = iPaySDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		831E058FFE49B48E340E4FFB00D2E51F /* iPaySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPaySDK-prefix.pch"; sourceTree = "<group>"; };
+		84004A9A5AAD441767015F3E02B19D64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPaySDK-dummy.m"; sourceTree = "<group>"; };
+		8E56EA10AA39FE4041246FBDF28DC8A6 /* iPaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92ADB4A0E58F6AC6547E1AE003397265 /* iPaySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPaySDK-umbrella.h"; sourceTree = "<group>"; };
+		92FC9A9469E6BD2541E3F86F9F1E42C5 /* Pods-iPaySDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPaySDK_Example-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96A0B8AB9C492D99E8988E5D39F51867 /* Pods-iPaySDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPaySDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B76EACB3DE700CA4B13073D7481F88E /* Pods-iPaySDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPaySDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A0CFF0649C8096625B878AE545FD8640 /* Pods-iPaySDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iPaySDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A772718FE0176F9F3A5B4C1BE2588B78 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7DA77AFAF98CBF010BB7C15A8D10ECE /* Pods-iPaySDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPaySDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AFE5E6896DE3046940F4C044F78D8AB8 /* Pods-iPaySDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPaySDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		BA83352C218EFE280024C7FC /* iPaySDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPaySDK.swift; sourceTree = "<group>"; };
+		BA8E4558221A8F5200BA2D82 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BA8E455C221A901500BA2D82 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		BAA4AE2122193D83008019C9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		BF57FC1913AE013862B5885F42D7B540 /* Pods-iPaySDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPaySDK_Example-umbrella.h"; sourceTree = "<group>"; };
+		C3321E3A685FF660514D7876C1626F7F /* iPaySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iPaySDK.modulemap; sourceTree = "<group>"; };
+		D659260FC3F129FC97321A280C9AD9AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76643CCF0DE23D31287406D538C5BDD /* Pods-iPaySDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iPaySDK_Example-dummy.m"; sourceTree = "<group>"; };
+		DCD4D0DD9312E07176C9B38CC2EC8EA8 /* Pods-iPaySDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iPaySDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E09AD86DEF2585565FA397DED79C59C6 /* Pods-iPaySDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iPaySDK_Tests.modulemap"; sourceTree = "<group>"; };
+		F304C67E3FF74D156BD1CC6191EEE59F /* Pods_iPaySDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPaySDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15AC10B82344472BA65C62734040688F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AA3826486179664E3D01709860B0C8D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		668FB6A6F896B99B316AA8DB563D8985 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2299C4A5938604BF094EAC0F64448CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BF4F0127349074CA5BA8C604E3B789A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C35DE3CA34BBE607FE79727FE1BCBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2238148513AC706EE46424AE3A343A41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E56EA10AA39FE4041246FBDF28DC8A6 /* iPaySDK.framework */,
+				030838EC4033E161C45058C92EBDC91E /* Pods_iPaySDK_Example.framework */,
+				F304C67E3FF74D156BD1CC6191EEE59F /* Pods_iPaySDK_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CBDB335E58C396E77F3CFA759AE4EF0 /* Pods-iPaySDK_Example */ = {
+			isa = PBXGroup;
+			children = (
+				569969714808EC12A7ADC090E60DB50E /* Info.plist */,
+				156B8744DEEF1FBDB0E8F181169D957E /* Pods-iPaySDK_Example.modulemap */,
+				A7DA77AFAF98CBF010BB7C15A8D10ECE /* Pods-iPaySDK_Example-acknowledgements.markdown */,
+				DCD4D0DD9312E07176C9B38CC2EC8EA8 /* Pods-iPaySDK_Example-acknowledgements.plist */,
+				D76643CCF0DE23D31287406D538C5BDD /* Pods-iPaySDK_Example-dummy.m */,
+				48DD2DE38393ABE017BA17A2F03DD251 /* Pods-iPaySDK_Example-frameworks.sh */,
+				92FC9A9469E6BD2541E3F86F9F1E42C5 /* Pods-iPaySDK_Example-resources.sh */,
+				BF57FC1913AE013862B5885F42D7B540 /* Pods-iPaySDK_Example-umbrella.h */,
+				1A7234399B4EB118415510AD6EF335EA /* Pods-iPaySDK_Example.debug.xcconfig */,
+				1ECAEC93FA1D35AEAA36CDFC0B6C9E25 /* Pods-iPaySDK_Example.release.xcconfig */,
+			);
+			name = "Pods-iPaySDK_Example";
+			path = "Target Support Files/Pods-iPaySDK_Example";
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		60FE914BCCEE0B62C598AC4DE861850C /* Pods-iPaySDK_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D659260FC3F129FC97321A280C9AD9AE /* Info.plist */,
+				E09AD86DEF2585565FA397DED79C59C6 /* Pods-iPaySDK_Tests.modulemap */,
+				96A0B8AB9C492D99E8988E5D39F51867 /* Pods-iPaySDK_Tests-acknowledgements.markdown */,
+				3B29E1BD9A0B75A67F534A50665B5B12 /* Pods-iPaySDK_Tests-acknowledgements.plist */,
+				34C9E821469C50351FBCA1BF7E35F17B /* Pods-iPaySDK_Tests-dummy.m */,
+				AFE5E6896DE3046940F4C044F78D8AB8 /* Pods-iPaySDK_Tests-frameworks.sh */,
+				3A81600F52F836F8BA3B1D09E02C97B6 /* Pods-iPaySDK_Tests-resources.sh */,
+				62A273DC8AEBE21FCF0EA660A33AF214 /* Pods-iPaySDK_Tests-umbrella.h */,
+				A0CFF0649C8096625B878AE545FD8640 /* Pods-iPaySDK_Tests.debug.xcconfig */,
+				9B76EACB3DE700CA4B13073D7481F88E /* Pods-iPaySDK_Tests.release.xcconfig */,
+			);
+			name = "Pods-iPaySDK_Tests";
+			path = "Target Support Files/Pods-iPaySDK_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F112597E28E63FEAAE69E0C74DC8D74A /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2238148513AC706EE46424AE3A343A41 /* Products */,
+				BD090BC1DA065F30BA9D5DEBF4E9392E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AEED6C5448DE973C058735249EA59147 /* iPaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				BA83352C218EFE280024C7FC /* iPaySDK.swift */,
+				BA8E455C221A901500BA2D82 /* Services.swift */,
+				BAA4AE2122193D83008019C9 /* Endpoints.swift */,
+				BA8E4558221A8F5200BA2D82 /* Settings.swift */,
+				F7E98D943BC1048C7C297BAA854B4141 /* Pod */,
+				F1B543F539089248E36C1D2C9C4FC4CE /* Support Files */,
+			);
+			name = iPaySDK;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD090BC1DA065F30BA9D5DEBF4E9392E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CBDB335E58C396E77F3CFA759AE4EF0 /* Pods-iPaySDK_Example */,
+				60FE914BCCEE0B62C598AC4DE861850C /* Pods-iPaySDK_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F112597E28E63FEAAE69E0C74DC8D74A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEED6C5448DE973C058735249EA59147 /* iPaySDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F1B543F539089248E36C1D2C9C4FC4CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A772718FE0176F9F3A5B4C1BE2588B78 /* Info.plist */,
+				C3321E3A685FF660514D7876C1626F7F /* iPaySDK.modulemap */,
+				1A3D338922C9E1D46E0DA57C6AE29313 /* iPaySDK.xcconfig */,
+				8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */,
+				831E058FFE49B48E340E4FFB00D2E51F /* iPaySDK-prefix.pch */,
+				92ADB4A0E58F6AC6547E1AE003397265 /* iPaySDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/iPaySDK";
+			sourceTree = "<group>";
+		};
+		F7E98D943BC1048C7C297BAA854B4141 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7952002E094DD278F6B5FBC9016FBE73 /* iPaySDK.podspec */,
+				84004A9A5AAD441767015F3E02B19D64 /* LICENSE */,
+				6FD82722D14D1AD22A735CC9DAE29F7E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3B43ABB8CDA47C94F6465588EBA442CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091279972F30B8EC2FCDCC2BC37C74AF /* Pods-iPaySDK_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43777167693C2BAA52F1518D0F1BFF80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B3B4ADAFA49E23CD461265E5A1E363D /* Pods-iPaySDK_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6635A2015B177D32238E2451613690CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2857A98ED4F4429A1BAE844B3C4E6777 /* iPaySDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A6D8A82AB53B1CDD45B217BD47E42772 /* iPaySDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E8DD4EA7557D1CDC373FE85B43E426C /* Build configuration list for PBXNativeTarget "iPaySDK" */;
+			buildPhases = (
+				DD0C8DA7D2DEA5D8886685E31778704A /* Sources */,
+				668FB6A6F896B99B316AA8DB563D8985 /* Frameworks */,
+				6635A2015B177D32238E2451613690CB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iPaySDK;
+			productName = iPaySDK;
+			productReference = 8E56EA10AA39FE4041246FBDF28DC8A6 /* iPaySDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BB49A3D4F1420113F96893F068B08B31 /* Pods-iPaySDK_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7C781B0364D7A1FBB99E6606CC3259 /* Build configuration list for PBXNativeTarget "Pods-iPaySDK_Tests" */;
+			buildPhases = (
+				BF7F87F726DA1D5DBADA034AB11FB386 /* Sources */,
+				15AC10B82344472BA65C62734040688F /* Frameworks */,
+				3B43ABB8CDA47C94F6465588EBA442CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7752FC1B58503A4BA454FBF5E559A5 /* PBXTargetDependency */,
+			);
+			name = "Pods-iPaySDK_Tests";
+			productName = "Pods-iPaySDK_Tests";
+			productReference = F304C67E3FF74D156BD1CC6191EEE59F /* Pods_iPaySDK_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF4AC64BB10DB86C264224EC6DC3D183 /* Pods-iPaySDK_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C55212181767BEB422E5A32807CA2B9 /* Build configuration list for PBXNativeTarget "Pods-iPaySDK_Example" */;
+			buildPhases = (
+				28848E168A81977053F19A10EC20FD3D /* Sources */,
+				9BF4F0127349074CA5BA8C604E3B789A /* Frameworks */,
+				43777167693C2BAA52F1518D0F1BFF80 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				191FEB013257F60BE6A3A0325082CC31 /* PBXTargetDependency */,
+			);
+			name = "Pods-iPaySDK_Example";
+			productName = "Pods-iPaySDK_Example";
+			productReference = 030838EC4033E161C45058C92EBDC91E /* Pods_iPaySDK_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					A6D8A82AB53B1CDD45B217BD47E42772 = {
+						LastSwiftMigration = 1000;
+					};
+					BB49A3D4F1420113F96893F068B08B31 = {
+						LastSwiftMigration = 1000;
+					};
+					EF4AC64BB10DB86C264224EC6DC3D183 = {
+						LastSwiftMigration = 1000;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2238148513AC706EE46424AE3A343A41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6D8A82AB53B1CDD45B217BD47E42772 /* iPaySDK */,
+				EF4AC64BB10DB86C264224EC6DC3D183 /* Pods-iPaySDK_Example */,
+				BB49A3D4F1420113F96893F068B08B31 /* Pods-iPaySDK_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28848E168A81977053F19A10EC20FD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8E455E221A901500BA2D82 /* Services.swift in Sources */,
+				8ECB648A01C8AB087415678BF1392768 /* Pods-iPaySDK_Example-dummy.m in Sources */,
+				BAA4AE2322193D83008019C9 /* Endpoints.swift in Sources */,
+				BA8E455A221A8F5200BA2D82 /* Settings.swift in Sources */,
+				BA83352E218EFE280024C7FC /* iPaySDK.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7F87F726DA1D5DBADA034AB11FB386 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8E455F221A901500BA2D82 /* Services.swift in Sources */,
+				841FCDFD6045C9D367E404ADAA4F93C0 /* Pods-iPaySDK_Tests-dummy.m in Sources */,
+				BAA4AE2422193D83008019C9 /* Endpoints.swift in Sources */,
+				BA8E455B221A8F5200BA2D82 /* Settings.swift in Sources */,
+				BA83352F218EFE280024C7FC /* iPaySDK.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD0C8DA7D2DEA5D8886685E31778704A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA8E455D221A901500BA2D82 /* Services.swift in Sources */,
+				DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */,
+				BAA4AE2222193D83008019C9 /* Endpoints.swift in Sources */,
+				BA8E4559221A8F5200BA2D82 /* Settings.swift in Sources */,
+				BA83352D218EFE280024C7FC /* iPaySDK.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		191FEB013257F60BE6A3A0325082CC31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iPaySDK;
+			target = A6D8A82AB53B1CDD45B217BD47E42772 /* iPaySDK */;
+			targetProxy = AAB672C2D2EC212AD08515BEF9E0D609 /* PBXContainerItemProxy */;
+		};
+		5C7752FC1B58503A4BA454FBF5E559A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-iPaySDK_Example";
+			target = EF4AC64BB10DB86C264224EC6DC3D183 /* Pods-iPaySDK_Example */;
+			targetProxy = 89BB67DC69B8C532645EB01C312512DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		847120FEC09B7184AB0BE1C1EB95CD64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A3D338922C9E1D46E0DA57C6AE29313 /* iPaySDK.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iPaySDK/iPaySDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iPaySDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iPaySDK/iPaySDK.modulemap";
+				PRODUCT_MODULE_NAME = iPaySDK;
+				PRODUCT_NAME = iPaySDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		93D8770015CDB19DDE889C6ECE592217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ECAEC93FA1D35AEAA36CDFC0B6C9E25 /* Pods-iPaySDK_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPaySDK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPaySDK_Example/Pods-iPaySDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7E366F53892809673267BA124BC6A18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0CFF0649C8096625B878AE545FD8640 /* Pods-iPaySDK_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPaySDK_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPaySDK_Tests/Pods-iPaySDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BC9B3C71A8B28C9CEF5DBDBD6E6E4933 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A7234399B4EB118415510AD6EF335EA /* Pods-iPaySDK_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPaySDK_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPaySDK_Example/Pods-iPaySDK_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D16A0A9A2B7DE81CBDD2CE6CD0A58721 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B76EACB3DE700CA4B13073D7481F88E /* Pods-iPaySDK_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iPaySDK_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iPaySDK_Tests/Pods-iPaySDK_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E30677BC11413E6E2F775872A58C2CAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A3D338922C9E1D46E0DA57C6AE29313 /* iPaySDK.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iPaySDK/iPaySDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iPaySDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iPaySDK/iPaySDK.modulemap";
+				PRODUCT_MODULE_NAME = iPaySDK;
+				PRODUCT_NAME = iPaySDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
+				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7C781B0364D7A1FBB99E6606CC3259 /* Build configuration list for PBXNativeTarget "Pods-iPaySDK_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7E366F53892809673267BA124BC6A18 /* Debug */,
+				D16A0A9A2B7DE81CBDD2CE6CD0A58721 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E8DD4EA7557D1CDC373FE85B43E426C /* Build configuration list for PBXNativeTarget "iPaySDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E30677BC11413E6E2F775872A58C2CAF /* Debug */,
+				847120FEC09B7184AB0BE1C1EB95CD64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C55212181767BEB422E5A32807CA2B9 /* Build configuration list for PBXNativeTarget "Pods-iPaySDK_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9B3C71A8B28C9CEF5DBDBD6E6E4933 /* Debug */,
+				93D8770015CDB19DDE889C6ECE592217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
