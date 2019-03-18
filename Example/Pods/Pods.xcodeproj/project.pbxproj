@@ -14,18 +14,6 @@
 		8ECB648A01C8AB087415678BF1392768 /* Pods-iPaySDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D76643CCF0DE23D31287406D538C5BDD /* Pods-iPaySDK_Example-dummy.m */; };
 		9AA3826486179664E3D01709860B0C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B1C35DE3CA34BBE607FE79727FE1BCBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		BA83352D218EFE280024C7FC /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83352C218EFE280024C7FC /* iPaySDK.swift */; };
-		BA83352E218EFE280024C7FC /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83352C218EFE280024C7FC /* iPaySDK.swift */; };
-		BA83352F218EFE280024C7FC /* iPaySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83352C218EFE280024C7FC /* iPaySDK.swift */; };
-		BA8E4559221A8F5200BA2D82 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4558221A8F5200BA2D82 /* Settings.swift */; };
-		BA8E455A221A8F5200BA2D82 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4558221A8F5200BA2D82 /* Settings.swift */; };
-		BA8E455B221A8F5200BA2D82 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4558221A8F5200BA2D82 /* Settings.swift */; };
-		BA8E455D221A901500BA2D82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E455C221A901500BA2D82 /* Services.swift */; };
-		BA8E455E221A901500BA2D82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E455C221A901500BA2D82 /* Services.swift */; };
-		BA8E455F221A901500BA2D82 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E455C221A901500BA2D82 /* Services.swift */; };
-		BAA4AE2222193D83008019C9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4AE2122193D83008019C9 /* Endpoints.swift */; };
-		BAA4AE2322193D83008019C9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4AE2122193D83008019C9 /* Endpoints.swift */; };
-		BAA4AE2422193D83008019C9 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA4AE2122193D83008019C9 /* Endpoints.swift */; };
 		DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */; };
 		F2299C4A5938604BF094EAC0F64448CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +51,6 @@
 		6FD82722D14D1AD22A735CC9DAE29F7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7952002E094DD278F6B5FBC9016FBE73 /* iPaySDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = iPaySDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		831E058FFE49B48E340E4FFB00D2E51F /* iPaySDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPaySDK-prefix.pch"; sourceTree = "<group>"; };
-		84004A9A5AAD441767015F3E02B19D64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8DB5222AE648F4C418F6D40D681CD65A /* iPaySDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iPaySDK-dummy.m"; sourceTree = "<group>"; };
 		8E56EA10AA39FE4041246FBDF28DC8A6 /* iPaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92ADB4A0E58F6AC6547E1AE003397265 /* iPaySDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iPaySDK-umbrella.h"; sourceTree = "<group>"; };
@@ -75,10 +62,6 @@
 		A772718FE0176F9F3A5B4C1BE2588B78 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7DA77AFAF98CBF010BB7C15A8D10ECE /* Pods-iPaySDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iPaySDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AFE5E6896DE3046940F4C044F78D8AB8 /* Pods-iPaySDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iPaySDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		BA83352C218EFE280024C7FC /* iPaySDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPaySDK.swift; sourceTree = "<group>"; };
-		BA8E4558221A8F5200BA2D82 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		BA8E455C221A901500BA2D82 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		BAA4AE2122193D83008019C9 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		BF57FC1913AE013862B5885F42D7B540 /* Pods-iPaySDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iPaySDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		C3321E3A685FF660514D7876C1626F7F /* iPaySDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iPaySDK.modulemap; sourceTree = "<group>"; };
 		D659260FC3F129FC97321A280C9AD9AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,10 +167,6 @@
 		AEED6C5448DE973C058735249EA59147 /* iPaySDK */ = {
 			isa = PBXGroup;
 			children = (
-				BA83352C218EFE280024C7FC /* iPaySDK.swift */,
-				BA8E455C221A901500BA2D82 /* Services.swift */,
-				BAA4AE2122193D83008019C9 /* Endpoints.swift */,
-				BA8E4558221A8F5200BA2D82 /* Settings.swift */,
 				F7E98D943BC1048C7C297BAA854B4141 /* Pod */,
 				F1B543F539089248E36C1D2C9C4FC4CE /* Support Files */,
 			);
@@ -238,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				7952002E094DD278F6B5FBC9016FBE73 /* iPaySDK.podspec */,
-				84004A9A5AAD441767015F3E02B19D64 /* LICENSE */,
 				6FD82722D14D1AD22A735CC9DAE29F7E /* README.md */,
 			);
 			name = Pod;
@@ -371,11 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8E455E221A901500BA2D82 /* Services.swift in Sources */,
 				8ECB648A01C8AB087415678BF1392768 /* Pods-iPaySDK_Example-dummy.m in Sources */,
-				BAA4AE2322193D83008019C9 /* Endpoints.swift in Sources */,
-				BA8E455A221A8F5200BA2D82 /* Settings.swift in Sources */,
-				BA83352E218EFE280024C7FC /* iPaySDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,11 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8E455F221A901500BA2D82 /* Services.swift in Sources */,
 				841FCDFD6045C9D367E404ADAA4F93C0 /* Pods-iPaySDK_Tests-dummy.m in Sources */,
-				BAA4AE2422193D83008019C9 /* Endpoints.swift in Sources */,
-				BA8E455B221A8F5200BA2D82 /* Settings.swift in Sources */,
-				BA83352F218EFE280024C7FC /* iPaySDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,11 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8E455D221A901500BA2D82 /* Services.swift in Sources */,
 				DDCCBBCA54CB097EA1CB4DC4CEBB1D15 /* iPaySDK-dummy.m in Sources */,
-				BAA4AE2222193D83008019C9 /* Endpoints.swift in Sources */,
-				BA8E4559221A8F5200BA2D82 /* Settings.swift in Sources */,
-				BA83352D218EFE280024C7FC /* iPaySDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
