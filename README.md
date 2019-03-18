@@ -1,6 +1,4 @@
 # iPaySDK
-
-[![CI Status](https://img.shields.io/travis/Tasnim Alam Shovon/iPaySDK.svg?style=flat)](https://travis-ci.org/Tasnim Alam Shovon/iPaySDK)
 [![Version](https://img.shields.io/cocoapods/v/iPaySDK.svg?style=flat)](https://cocoapods.org/pods/iPaySDK)
 [![License](https://img.shields.io/cocoapods/l/iPaySDK.svg?style=flat)](https://cocoapods.org/pods/iPaySDK)
 [![Platform](https://img.shields.io/cocoapods/p/iPaySDK.svg?style=flat)](https://cocoapods.org/pods/iPaySDK)
