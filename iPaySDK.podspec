@@ -52,8 +52,6 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Tasnim Alam Shovon" => "shovon54@gmail.com" }
-  # Or just: s.author    = "Tasnim Alam Shovon"
-  # s.authors            = { "Tasnim Alam Shovon" => "shovon54@gmail.com" }
   # s.social_media_url   = "http://twitter.com/Tasnim Alam Shovon"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +87,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "iPaySDK/Classes/*.swift"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "iPaySDK/Classes/**/*"
 
   s.swift_version = "4.2"
 
