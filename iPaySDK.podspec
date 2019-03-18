@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
   s.source_files  = "iPaySDK/Classes/*.swift"
   s.exclude_files = "Classes/Exclude"
 
+  s.swift_version = "4.2"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
