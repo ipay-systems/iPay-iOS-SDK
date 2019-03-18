@@ -22,7 +22,7 @@ pod 'iPaySDK'
 
 ## Author
 
-Tasnim Alam Shovon, tasnim.alam@ipay.com.bd
+Tasnim Alam Shovon, shovon54@gmail.com
 
 ## License
 
