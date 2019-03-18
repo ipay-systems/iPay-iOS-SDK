@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "This library is for easy iPay integration in third party application. With this library third party app can connect with iPay and make payments easily."
 
-  s.homepage     = "https://github.com/shovon0203/iPaySDK"
+  s.homepage     = "https://github.com/ipay-systems/iPaySDK"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/shovon0203/iPaySDK.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/ipay-systems/iPaySDK", :branch => "master" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
