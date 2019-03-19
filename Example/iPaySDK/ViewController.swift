@@ -12,7 +12,7 @@ import iPaySDK
 class ViewController: UIViewController, iPaySDKDelegate {
     func oauthDidSuccess() {
         DispatchQueue.main.async {
-            self.tokenLabel.text = iPaySDK.shared.getTokenToShowNow()
+            self.tokenLabel.text = "oAuth was successful"
             self.connectButton.setTitle("Linked with iPay", for: .normal)
             self.connectButton.backgroundColor = UIColor.green
             self.connectButton.setTitleColor(UIColor.black, for: .normal)
@@ -34,7 +34,7 @@ class ViewController: UIViewController, iPaySDKDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //iPaySDK.shared.environment = .Development
+        iPaySDK.shared.environment = .Development
         iPaySDK.shared.configure(withClientId: "xyz")
         iPaySDK.shared.delegate = self
     }

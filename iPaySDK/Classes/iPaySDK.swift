@@ -91,16 +91,6 @@ public class iPaySDK {
         return false
     }
     
-    //TODO: Remove this method
-    public func getTokenToShowNow() -> String{
-        if let model = Settings.getTokenFromDefaults() {
-            return "Access Token: " + model.accessToken! + "\nRefresh Token: " + model.refreshToken!
-        }
-        return ""
-    }
-
-    
-    
     fileprivate func exchangeToken(withState: String, authCode: String){
         if withState != Settings.state {
             print("iPaySDK:== invalid state")
@@ -110,13 +100,16 @@ public class iPaySDK {
         let request = TokenRequestModel.init(appKey: Settings.client_id, authCode: authCode)
         
         Services.tokenExchange(model: request) { (response) in
-            if let _ = response.accessToken {
-                Settings.saveTokenInDefaults(model: response)
+            guard let res = response else{
+                self.delegate?.oauthDidFail()
+                return
+            }
+            if let _ = res.accessToken {
+                Settings.saveTokenInDefaults(model: res)
                 self.delegate?.oauthDidSuccess()
             }else{
                 self.delegate?.oauthDidFail()
             }
-            
         }
     }
     

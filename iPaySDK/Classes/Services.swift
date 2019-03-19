@@ -64,8 +64,8 @@ struct Services {
         }.resume()
     }
     
-    public static func tokenExchange(model: TokenRequestModel, completion: @escaping (TokenResponseModel) -> Void){
-        guard let url = URL.init(string:  Endpoints.getSessionInitiateURL(development: iPaySDK.shared.environment)) else {
+    public static func tokenExchange(model: TokenRequestModel, completion: @escaping (TokenResponseModel?) -> Void){
+        guard let url = URL.init(string:  Endpoints.getExchangeTokenURL(development: iPaySDK.shared.environment)) else {
             return
         }
         var request: URLRequest = URLRequest.init(url: url)
@@ -95,13 +95,15 @@ struct Services {
                     if let tokenResponseModel = try? JSONDecoder().decode(TokenResponseModel.self, from: data) {
                         completion(tokenResponseModel)
                     }
+                }else{
+                    completion(nil)
                 }
             }
         }.resume()
     }
     
     public static func verifyToken(model: TokenVerifyModel, completion: @escaping (Bool)->Void){
-        guard let url = URL.init(string:  Endpoints.getSessionInitiateURL(development: iPaySDK.shared.environment)) else {
+        guard let url = URL.init(string:  Endpoints.getVerifyTokenURL(development: iPaySDK.shared.environment)) else {
             return
         }
         var request: URLRequest = URLRequest.init(url: url)
