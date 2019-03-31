@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "iPaySDK"
   s.version      = "0.1.2"
-  s.summary      = "A framework for connecting with iPay and seamless payment experience."
+  s.summary      = "A framework for connecting with iPay and smooth payment experience."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #
 
   #s.license      = "MIT (example)"
-   s.license      = { :type => "MIT", :file => "LICENSE" }
+   s.license      = { :type => "Apache-2.0", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -126,6 +126,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "SVProgressHUD"
 
 end

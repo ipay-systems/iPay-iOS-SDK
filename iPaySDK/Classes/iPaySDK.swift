@@ -17,6 +17,18 @@ public enum DevelopmentEnvironment: String {
 public protocol iPaySDKDelegate {
     func oauthDidSuccess()
     func oauthDidFail()
+    
+    func paymentDidSuccess()
+    func paymentDidFail()
+}
+
+enum PendingAction: String {
+    case MakePayment
+    case None
+}
+
+enum DictionaryKeys: String {
+    case amountKey = "amount"
 }
 
 public class iPaySDK {
@@ -24,11 +36,14 @@ public class iPaySDK {
     public var delegate: iPaySDKDelegate?
     public var isAuthenticated: Bool = false
     public var environment: DevelopmentEnvironment = .Production
+    var pendingAction: PendingAction = .None
+    var infoDictionary: [AnyHashable: Any]? = nil
     
     public static let shared: iPaySDK = {
        return iPaySDK()
     }()
-        
+    
+    /// Initial configuration with appropriate client id. Used during Application initialization phase.
     public func configure(withClientId: String){
         Settings.client_id = withClientId
         Settings.device_id = UIDevice.current.identifierForVendor?.uuidString ?? "no_device"
@@ -48,6 +63,8 @@ public class iPaySDK {
         }
     }
     
+    
+    /// Initiate a session if it is already not authenticated
     public func userInitiateSession(){
         if(self.isAuthenticated){
             print("Already Authenticated")
@@ -68,6 +85,10 @@ public class iPaySDK {
         }
     }
     
+    
+    /// This method is used by the Application Delegate after the authorization is done.
+    ///
+    /// Access token is received in exchange of Access Token in this method
     public func handleUrl(url: URL) -> Bool {
         if url.scheme == externalURLScheme() {
             if url.absoluteString.contains("success") {
@@ -91,6 +112,49 @@ public class iPaySDK {
         return false
     }
     
+    
+    /// Get the balance if authenticated
+    ///
+    /// If it is not authenticated returns NAN
+    ///
+    ///     iPaySDK.shared.getBalance { (balance) in
+    ///        DispatchQueue.main.async {
+    ///            print(balance)
+    ///        }
+    ///     }
+    public func getBalance(completion: @escaping (Double) -> Void){
+        if self.isAuthenticated {
+            SDKServices.getBalance { (model) in
+                completion(model?.balance ?? Double.nan)
+            }
+        }
+    }
+    
+    
+    /// If there is a valid token it attempts to complete the payment.
+    ///
+    /// If there is no valid token then it initiate new session and after initiating session it completes the payment.
+    public func makePayment(amount: Double){
+        if self.isAuthenticated {
+            let model: PaymentModel = PaymentModel.init(amount: amount)
+            SDKServices.makePayment(model: model) { (status) in
+                if status {
+                    self.delegate?.paymentDidSuccess()
+                }else{
+                    self.delegate?.paymentDidFail()
+                }
+            }
+        }else{
+            self.pendingAction = .MakePayment
+            self.infoDictionary = Dictionary<String, String>()
+            self.infoDictionary?[DictionaryKeys.amountKey.rawValue] = amount
+            self.userInitiateSession()
+        }
+    }
+    
+    
+    
+    /// Token exchange method.
     fileprivate func exchangeToken(withState: String, authCode: String){
         if withState != Settings.state {
             print("iPaySDK:== invalid state")
@@ -105,21 +169,41 @@ public class iPaySDK {
                 return
             }
             if let _ = res.accessToken {
+                self.isAuthenticated = true
                 Settings.saveTokenInDefaults(model: res)
-                self.delegate?.oauthDidSuccess()
+                
+                switch self.pendingAction {
+                case .MakePayment:
+                    self.makePayment(amount: self.infoDictionary?[DictionaryKeys.amountKey.rawValue] as! Double)
+                    self.infoDictionary = nil
+                case .None:
+                    self.delegate?.oauthDidSuccess()
+                }
+                
+                
             }else{
+                self.isAuthenticated = false
                 self.delegate?.oauthDidFail()
             }
         }
     }
     
+    /// Method to get URL Types in info plist
+    
     fileprivate func externalURLScheme() -> String? {
         guard let urlTypes = Bundle.main.infoDictionary?["CFBundleURLTypes"] as? [AnyObject],
             let urlTypeDictionary = urlTypes.first as? [String: AnyObject],
-            let urlSchemes = urlTypeDictionary["CFBundleURLSchemes"] as? [AnyObject],
-            let externalURLScheme = urlSchemes.first as? String else { return nil }
+            let urlSchemes = urlTypeDictionary["CFBundleURLSchemes"] as? [AnyObject] else {return nil}
         
-        return externalURLScheme
+        for externalURLScheme in urlSchemes {
+            if let scheme = externalURLScheme as? String {
+                if scheme.contains("ipay"){
+                    return scheme
+                }
+            }
+        }
+        
+        return nil
     }
 }
 
@@ -138,20 +222,6 @@ public extension String {
     static func randomString(length: Int) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         return String((0...length-1).map{ _ in letters.randomElement()! })
-    }
-}
-
-public extension URL {
-    func isValidCheckoutURL(url : URL) -> Bool {
-        guard let checkoutUrl = url.host else {
-            return false
-        }
-        
-        if checkoutUrl == "app.checkout.com" {
-            return true
-        }else {
-            return false
-        }
     }
 }
 

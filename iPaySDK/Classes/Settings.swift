@@ -9,6 +9,7 @@ import Foundation
 
 private enum UserDefaultKeys: String{
     case token
+    case refreshToken
 }
 
 struct Settings {

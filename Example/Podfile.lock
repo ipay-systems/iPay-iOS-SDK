@@ -1,15 +1,22 @@
 PODS:
-  - iPaySDK (0.1.0)
+  - iPaySDK (0.1.2):
+    - SVProgressHUD
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - iPaySDK (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SVProgressHUD
 
 EXTERNAL SOURCES:
   iPaySDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  iPaySDK: 6e3f592096fd8b1526150493a755766b1d780e74
+  iPaySDK: 314d72fc44fa6ce36f2b1317c9bc99cbcc373ac6
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
 PODFILE CHECKSUM: 6746032b6a5a3308505e19b010564d13d38e210e
 

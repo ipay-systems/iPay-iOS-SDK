@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 struct SessionData: Codable {
     let appKey: String
@@ -39,6 +40,9 @@ struct Services {
         guard let url = URL.init(string: Endpoints.getSessionInitiateURL(development: iPaySDK.shared.environment)) else {
             return
         }
+        
+        SVProgressHUD.show()
+        
         var request: URLRequest = URLRequest.init(url: url)
         request.httpMethod = "POST"
         
@@ -53,6 +57,10 @@ struct Services {
         request.httpBody = jsonData
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
@@ -68,6 +76,9 @@ struct Services {
         guard let url = URL.init(string:  Endpoints.getExchangeTokenURL(development: iPaySDK.shared.environment)) else {
             return
         }
+        
+        SVProgressHUD.show()
+        
         var request: URLRequest = URLRequest.init(url: url)
         request.httpMethod = "POST"
         
@@ -81,6 +92,9 @@ struct Services {
         request.httpBody = jsonData
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
@@ -106,6 +120,9 @@ struct Services {
         guard let url = URL.init(string:  Endpoints.getVerifyTokenURL(development: iPaySDK.shared.environment)) else {
             return
         }
+        
+        SVProgressHUD.show()
+        
         var request: URLRequest = URLRequest.init(url: url)
         request.httpMethod = "POST"
         
@@ -119,6 +136,10 @@ struct Services {
         request.httpBody = jsonData
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
             guard let _ = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
@@ -131,8 +152,51 @@ struct Services {
                     completion(false)
                 }
             }
-            }.resume()
+        }.resume()
 
     }
-
+    
+    public static func refreshToken(model: TokenRequestModel, completion: @escaping (TokenResponseModel?) -> Void){
+        guard let url = URL.init(string:  Endpoints.getVerifyTokenURL(development: iPaySDK.shared.environment)) else {
+            return
+        }
+        
+        SVProgressHUD.show()
+        
+        var request: URLRequest = URLRequest.init(url: url)
+        request.httpMethod = "GET"
+        
+        let token = Settings.getTokenFromDefaults()
+        
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        headers["access-token"] = token?.accessToken
+        headers["refresh-token"] = token?.refreshToken
+        request.allHTTPHeaderFields = headers
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse {
+                print("statusCode: \(httpResponse.statusCode)")
+                if httpResponse.statusCode == 200 {
+                    let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                    if let responseJSON = responseJSON as? [String: Any] {
+                        print(responseJSON)
+                    }
+                    if let tokenResponseModel = try? JSONDecoder().decode(TokenResponseModel.self, from: data) {
+                        completion(tokenResponseModel)
+                    }
+                }else{
+                    completion(nil)
+                }
+            }
+        }.resume()
+    }
 }

@@ -10,12 +10,36 @@ import UIKit
 import iPaySDK
 
 class ViewController: UIViewController, iPaySDKDelegate {
+    func paymentDidSuccess() {
+        iPaySDK.shared.getBalance { (balance) in
+            DispatchQueue.main.async {
+                self.balanceLabel.text = "iPay Balance: \(balance)"
+            }
+        }
+    }
+    
+    func paymentDidFail() {
+        let alert = UIAlertController.init(title: "SDK", message: "Payment Failed", preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "OK", style: .default) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+        
+        alert.show()
+    }
+    
     func oauthDidSuccess() {
         DispatchQueue.main.async {
             self.tokenLabel.text = "oAuth was successful"
             self.connectButton.setTitle("Linked with iPay", for: .normal)
             self.connectButton.backgroundColor = UIColor.green
             self.connectButton.setTitleColor(UIColor.black, for: .normal)
+        }
+        
+        iPaySDK.shared.getBalance { (balance) in
+            DispatchQueue.main.async {
+                self.balanceLabel.text = "iPay Balance: \(balance)"
+            }
         }
     }
     
@@ -30,6 +54,7 @@ class ViewController: UIViewController, iPaySDKDelegate {
     
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var tokenLabel: UILabel!
+    @IBOutlet weak var balanceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +67,18 @@ class ViewController: UIViewController, iPaySDKDelegate {
 
     @IBAction func connectTapped(_ sender: UIButton) {
         iPaySDK.shared.userInitiateSession()
+    }
+    
+    @IBAction func showBalanceTapped(_ sender: UIButton) {
+        iPaySDK.shared.getBalance { (balance) in
+            DispatchQueue.main.async {
+                self.balanceLabel.text = "iPay Balance: \(balance)"
+            }
+        }
+    }
+    
+    @IBAction func makePaymentButtonTapped(_ sender: UIButton) {
+        iPaySDK.shared.makePayment(amount: 10)
     }
     
 }
