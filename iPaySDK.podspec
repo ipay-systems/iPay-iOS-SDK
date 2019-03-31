@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "iPaySDK"
-  s.version      = "0.1.2"
+  s.version      = "0.8.0"
   s.summary      = "A framework for connecting with iPay and smooth payment experience."
 
   # This description is used to generate tags and improve search results.
@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ipay-systems/iPaySDK.git", :tag => "0.1.2" }
+  s.source       = { :git => "https://github.com/ipay-systems/iPaySDK.git", :tag => "0.8.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
