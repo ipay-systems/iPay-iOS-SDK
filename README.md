@@ -8,6 +8,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* iOS 9.3 and Above
 
 ## Installation
 
@@ -16,6 +17,44 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'iPaySDK'
+```
+
+## How to use
+Setup Configuration and Initialization
+```
+iPaySDK.shared.environment = .Development //Use this for Development environment
+iPaySDK.shared.configure(withClientId: "xyz")
+iPaySDK.shared.delegate = self
+```
+
+Initiate Session
+
+```
+iPaySDK.shared.userInitiateSession()
+```
+
+Get Balance
+
+```
+iPaySDK.shared.getBalance { (balance) in
+   DispatchQueue.main.async {
+       print(balance)
+   }
+}
+```
+
+Make Payment
+```
+iPaySDK.shared.makePayment(amount: 10)
+```
+
+SDK Delegate: Use these delegate to handle callbacks and show appropriate results to improve user experience.
+```
+func oauthDidSuccess()
+func oauthDidFail()
+    
+func paymentDidSuccess()
+func paymentDidFail()
 ```
 
 ## Author
