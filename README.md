@@ -19,6 +19,23 @@ it, simply add the following line to your Podfile:
 pod 'iPaySDK'
 ```
 
+## Prerequisite
+iPaySDK requires merchant to obtain the `client_id` from iPay. If your `client_id` is `xyz` then you need to add the following URL Type in your info.plist
+
+```
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>None</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>ipayxyz</string>
+			</array>
+		</dict>
+	</array>
+```
+
 ## How to use
 Setup Configuration and Initialization
 ```
@@ -32,6 +49,16 @@ Initiate Session
 ```
 iPaySDK.shared.userInitiateSession()
 ```
+
+Add URL Handler
+
+Place this code in AppDelegate
+```
+func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    return iPaySDK.shared.handleUrl(url: url)
+}
+```
+
 
 Get Balance
 
@@ -47,6 +74,14 @@ Make Payment
 ```
 iPaySDK.shared.makePayment(amount: 10)
 ```
+
+Check Whether SDK is already connected
+```
+if iPaySDK.shared.isAuthenticated {
+    //Write your code here     
+}
+```
+
 
 SDK Delegate: Use these delegate to handle callbacks and show appropriate results to improve user experience.
 ```
