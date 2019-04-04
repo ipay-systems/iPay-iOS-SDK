@@ -75,6 +75,15 @@ Make Payment
 iPaySDK.shared.makePayment(amount: 10)
 ```
 
+Fetch User's Basic Info
+```
+iPaySDK.shared.getUserInfo { (model) in
+    DispatchQueue.main.async {
+        print("\(model.name ?? "") \n \(model.primaryEmailAddress ?? "")")
+    }
+}
+```
+
 Check Whether SDK is already connected
 ```
 if iPaySDK.shared.isAuthenticated {
@@ -86,8 +95,7 @@ if iPaySDK.shared.isAuthenticated {
 SDK Delegate: Use these delegate to handle callbacks and show appropriate results to improve user experience.
 ```
 func oauthDidSuccess()
-func oauthDidFail()
-    
+func oauthDidFail() 
 func paymentDidSuccess()
 func paymentDidFail()
 ```
