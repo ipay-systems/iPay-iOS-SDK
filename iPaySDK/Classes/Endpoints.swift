@@ -9,14 +9,14 @@ import Foundation
 
 struct Endpoints {
     enum AuthEnvironment: String {
-        case Production = "xyz"
-        case Sandbox = "abc"
+        case Production = "https://app.ipay.com.bd"
+        case Sandbox = "https://demo.ipay.com.bd"
         case Development = "http://10.10.10.10:8089"
     }
     
     enum PaymentEnvironment: String {
-        case Production = "xyz"
-        case Sandbox = "abc"
+        case Production = "https://app.ipay.com.bd"
+        case Sandbox = "https://demo.ipay.com.bd"
         case Development = "http://10.10.10.11:8088"
     }
     
@@ -25,6 +25,7 @@ struct Endpoints {
     static var verifyTokenEndpoint: String = "/oauth2/v1/auth/session/verify"
     static var refreshTokenEndpoint: String = "/oauth2/v1/auth/token"
     
+    static var userInfoEndpoint: String = "/oauth2/v1/auth/user/user-info"
     static var balanceEndpoint: String = "/api/psdk/balance"
     static var paymentEndpoint: String = "/api/psdk/payment"
     
@@ -93,4 +94,16 @@ struct Endpoints {
             return PaymentEnvironment.Sandbox.rawValue + paymentEndpoint
         }
     }
+    
+    public static func getUserInfoURL(development: DevelopmentEnvironment) -> String {
+        switch development {
+        case .Production:
+            return AuthEnvironment.Production.rawValue + userInfoEndpoint
+        case .Development:
+            return AuthEnvironment.Development.rawValue + userInfoEndpoint
+        case .Sandbox:
+            return AuthEnvironment.Sandbox.rawValue + userInfoEndpoint
+        }
+    }
+
 }

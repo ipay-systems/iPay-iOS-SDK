@@ -11,6 +11,14 @@ import iPaySDK
 
 class ViewController: UIViewController, iPaySDKDelegate {
     func paymentDidSuccess() {
+        let alert = UIAlertController.init(title: "Successful", message: "Thank you for the payment", preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "OK", style: .default) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(action)
+        
+        alert.show()
+
         iPaySDK.shared.getBalance { (balance) in
             DispatchQueue.main.async {
                 self.balanceLabel.text = "iPay Balance: \(balance)"
@@ -19,7 +27,7 @@ class ViewController: UIViewController, iPaySDKDelegate {
     }
     
     func paymentDidFail() {
-        let alert = UIAlertController.init(title: "SDK", message: "Payment Failed", preferredStyle: .alert)
+        let alert = UIAlertController.init(title: "Failed", message: "Payment Failed", preferredStyle: .alert)
         let action = UIAlertAction.init(title: "OK", style: .default) { (action) in
             alert.dismiss(animated: true, completion: nil)
         }
@@ -29,27 +37,29 @@ class ViewController: UIViewController, iPaySDKDelegate {
     }
     
     func oauthDidSuccess() {
-        DispatchQueue.main.async {
-            self.tokenLabel.text = "oAuth was successful"
-            self.connectButton.setTitle("Linked with iPay", for: .normal)
-            self.connectButton.backgroundColor = UIColor.green
-            self.connectButton.setTitleColor(UIColor.black, for: .normal)
-        }
+        self.tokenLabel.text = "oAuth was successful"
+        self.connectButton.setTitle("Linked with iPay", for: .normal)
+        self.connectButton.backgroundColor = UIColor.green
+        self.connectButton.setTitleColor(UIColor.black, for: .normal)
         
         iPaySDK.shared.getBalance { (balance) in
             DispatchQueue.main.async {
                 self.balanceLabel.text = "iPay Balance: \(balance)"
             }
         }
+        
+        iPaySDK.shared.getUserInfo { (model) in
+            DispatchQueue.main.async {
+                self.tokenLabel.text = "\(model.name ?? "") \n \(model.primaryEmailAddress ?? "")"
+            }
+        }
     }
     
     func oauthDidFail() {
-        DispatchQueue.main.async {
-            self.connectButton.setTitle("Link with iPay", for: .normal)
-            self.connectButton.backgroundColor = UIColor.red
-            self.connectButton.setTitleColor(UIColor.black, for: .normal)
-            self.tokenLabel.text = "oAuth Failed"
-        }
+        self.connectButton.setTitle("Link with iPay", for: .normal)
+        self.connectButton.backgroundColor = UIColor.red
+        self.connectButton.setTitleColor(UIColor.black, for: .normal)
+        self.tokenLabel.text = "oAuth Failed"
     }
     
     @IBOutlet weak var connectButton: UIButton!

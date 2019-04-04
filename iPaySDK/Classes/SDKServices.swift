@@ -17,6 +17,13 @@ struct PaymentModel: Codable {
     var amount: Double?
 }
 
+public struct UserInfoModel: Codable {
+    public var message: String?
+    public var name: String?
+    public var primaryEmailAddress: String?
+    public var profilePictureUrl: String?
+}
+
 struct SDKServices {
     public static func getBalance(completion: @escaping (BalanceResponseModel?) -> Void){
         guard let url = URL.init(string:  Endpoints.getBalanceURL(development: iPaySDK.shared.environment)) else {
@@ -90,7 +97,7 @@ struct SDKServices {
                 SVProgressHUD.dismiss()
             }
             
-            guard let data = data, error == nil else {
+            guard let _ = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")
                 return
             }
@@ -102,7 +109,47 @@ struct SDKServices {
                     completion(false)
                 }
             }
-            }.resume()
+        }.resume()
     }
 
+    
+    public static func getUserInfo(completion: @escaping (UserInfoModel?) -> Void){
+        guard let url = URL.init(string: Endpoints.getUserInfoURL(development: iPaySDK.shared.environment)) else {
+            return
+        }
+        
+        SVProgressHUD.show()
+        
+        var request: URLRequest = URLRequest.init(url: url)
+        request.httpMethod = "GET"
+        
+        let token = Settings.getTokenFromDefaults()
+        
+        var headers = request.allHTTPHeaderFields ?? [:]
+        headers["Content-Type"] = "application/json"
+        headers["access-token"] = token?.accessToken
+        request.allHTTPHeaderFields = headers
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+            
+            guard let data = data, error == nil else {
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse {
+                print("statusCode: \(httpResponse.statusCode)")
+                if httpResponse.statusCode == 200 {
+                    if let userInfoModel = try? JSONDecoder().decode(UserInfoModel.self, from: data) {
+                        completion(userInfoModel)
+                    }
+                }else{
+                    completion(nil)
+                }
+            }
+        }.resume()
+    }
 }

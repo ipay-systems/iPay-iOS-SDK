@@ -17,7 +17,6 @@ public enum DevelopmentEnvironment: String {
 public protocol iPaySDKDelegate {
     func oauthDidSuccess()
     func oauthDidFail()
-    
     func paymentDidSuccess()
     func paymentDidFail()
 }
@@ -53,10 +52,14 @@ public class iPaySDK {
             Services.verifyToken(model: model) { (status) in
                 self.isAuthenticated = status
                 if self.isAuthenticated {
-                    self.delegate?.oauthDidSuccess()
+                    DispatchQueue.main.async {
+                        self.delegate?.oauthDidSuccess()
+                    }
                     print("Authenticated")
                 }else{
-                    self.delegate?.oauthDidFail()
+                    DispatchQueue.main.async {
+                        self.delegate?.oauthDidFail()
+                    }
                     print("Not Authenticated")
                 }
             }
@@ -102,7 +105,9 @@ public class iPaySDK {
             }else if url.absoluteString.contains("cancel"){
                 //cancel case
                 print("iPaySDK:== failed")
-                delegate?.oauthDidFail()
+                DispatchQueue.main.async {
+                    self.delegate?.oauthDidFail()
+                }
             }else{
                 //unknown case
                 print("iPaySDK:== unknown error")
@@ -127,6 +132,23 @@ public class iPaySDK {
             SDKServices.getBalance { (model) in
                 completion(model?.balance ?? Double.nan)
             }
+        }else{
+            print("Not authenticated")
+        }
+    }
+    
+    /// Fetch Users basic info
+    ///
+    /// If there is a valid token returns users name, email, profile picture url
+    public func getUserInfo(completion: @escaping (UserInfoModel) -> Void) {
+        if self.isAuthenticated{
+            SDKServices.getUserInfo { (model) in
+                if let userModel = model {
+                    completion(userModel)
+                }
+            }
+        }else {
+            print("Not authenticated")
         }
     }
     
@@ -139,9 +161,13 @@ public class iPaySDK {
             let model: PaymentModel = PaymentModel.init(amount: amount)
             SDKServices.makePayment(model: model) { (status) in
                 if status {
-                    self.delegate?.paymentDidSuccess()
+                    DispatchQueue.main.async {
+                        self.delegate?.paymentDidSuccess()
+                    }
                 }else{
-                    self.delegate?.paymentDidFail()
+                    DispatchQueue.main.async {
+                        self.delegate?.paymentDidFail()
+                    }
                 }
             }
         }else{
@@ -177,13 +203,17 @@ public class iPaySDK {
                     self.makePayment(amount: self.infoDictionary?[DictionaryKeys.amountKey.rawValue] as! Double)
                     self.infoDictionary = nil
                 case .None:
-                    self.delegate?.oauthDidSuccess()
+                    DispatchQueue.main.async {
+                        self.delegate?.oauthDidSuccess()
+                    }
                 }
                 
                 
             }else{
                 self.isAuthenticated = false
-                self.delegate?.oauthDidFail()
+                DispatchQueue.main.async {
+                    self.delegate?.oauthDidFail()
+                }
             }
         }
     }
