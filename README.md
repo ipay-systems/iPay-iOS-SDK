@@ -1,4 +1,4 @@
-# iPaySDK
+# iPay iOS SDK
 [![Version](https://img.shields.io/cocoapods/v/iPaySDK.svg?style=flat)](https://cocoapods.org/pods/iPaySDK)
 [![License](https://img.shields.io/cocoapods/l/iPaySDK.svg?style=flat)](https://cocoapods.org/pods/iPaySDK)
 [![Platform](https://img.shields.io/cocoapods/p/iPaySDK.svg?style=flat)](https://cocoapods.org/pods/iPaySDK)
